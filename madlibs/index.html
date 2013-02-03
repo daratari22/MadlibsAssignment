@@ -11,25 +11,56 @@
 	<meta name="dc.language" content="en" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<title>Dominic Aratari Madlibs Assignment</title>
+	<title>Dominic Aratari Madlib Assignment</title>
 	
 	<link rel="stylesheet" href="styles.css" type="text/css" media="screen" charset="utf-8" />
 	
-	<style type="text/css" media="screen">		
-		/*local styles if any (quick tests and local only overrides)*/
-	</style>
-	
 	
 </head>
+
 <body>
 
-	<div class="wrap" >
+	<div class="wrap">
 		
+		<h1>Make a MadLib</h1>
+		
+	<ul>		
+		<li>Step 1: Enter words in the input fields.</li>
+		<li>Step 2: Click "Submit Sentence" to publish your sentence.</li>
+		<li>Step 3: Click "Reset Sentence" to begin again.</li>
+	</ul>	
 	
-		<p>The lazy dog would only walk on Mondays.</p>
-		
-		
+		<p>
+			The
+			<input type="text" name="input1" value="adjective" id="input1" title="adjective">
+			<input type="text" name="input2" value="noun" id="input2" title="noun">	
+			would only
+			<input type="text" name="input3" value="verb" id="input3" title="verb">
+			on Mondays.	
+		</p>
+
+		<button onClick="submitSentence();">Submit Sentence</button>
+		<button class="reset" onClick="window.location.reload()"> Reset Sentence</button>
+
+		<div id="story"></div>
+
 	</div>
 	
+	<script type="text/javascript" charset="utf-8">
+
+		var submitSentence = function submitSentence(){
+
+			var input1 = document.getElementById('input1').value;
+			var input2 = document.getElementById('input2').value;
+			var input3 = document.getElementById('input3').value;
+			
+			var story = "The" +" "+ input1 +" "+ input2 +" "+ "would only" +" "+  input3 +" "+ "on Mondays.";
+
+			document.getElementById('story').innerHTML = story;	
+		}
+
+	</script>
+
 </body>
+
 </html>
