@@ -54,3 +54,9 @@ table {
 }
 
 /* Your styles go here */
+
+.wrap p {
+	font-family: georgia;
+	font-size: 20px;
+	color: #777777;
+}
